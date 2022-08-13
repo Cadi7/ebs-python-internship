@@ -5,12 +5,12 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
+
 from apps.users.serializers import UserSerializer
 
 
 class RegisterUserView(GenericAPIView):
     serializer_class = UserSerializer
-
     permission_classes = (AllowAny,)
     authentication_classes = ()
 
@@ -29,3 +29,5 @@ class RegisterUserView(GenericAPIView):
         user.save()
 
         return Response(UserSerializer(user).data)
+
+

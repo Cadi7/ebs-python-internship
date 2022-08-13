@@ -20,6 +20,7 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(max_length=100, unique=True)),
                 ('body', models.TextField()),
                 ('posted', models.DateField(auto_now_add=True, db_index=True)),
+                ('enabled', models.DateField())
             ],
         ),
         migrations.CreateModel(
@@ -30,6 +31,7 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(max_length=100)),
             ],
         ),
+
         migrations.AddField(
             model_name='blog',
             name='category',
