@@ -36,12 +36,15 @@ Step 1: In *views.py* i added this class:
 ![image](https://i.imgur.com/S5900xr.png)
 
 Step 2: In *urls.py* i added this path: 
+
 ![image](https://i.imgur.com/ip5myk0.png)
 
 Step 3: In *serializers.py* i modified this class: 
+
 ![image](https://i.imgur.com/vvFAc3t.png)
 
 **Result**:
+
 ![image](https://i.imgur.com/yvE9QBX.png)
 
 
