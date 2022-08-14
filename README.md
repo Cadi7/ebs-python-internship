@@ -22,6 +22,7 @@ Step 2: I added this field into database table.
 Step 1: I used:  python manage.py createsuperuser  with `username`: Cadi and `password: 1234`
 
 Step 2: I created one blog.
+
 ![image](https://i.imgur.com/Y1aDf6F.png)
 
 **Result**: 
@@ -52,15 +53,18 @@ Step 3: In *serializers.py* i modified this class:
 ## 4. Create a new model **Comments** with **text** and **blog** foreign key, here we will save comments for each blog post. 
 
 Step 1: In *models.py* i added this class: 
+
 ![image](https://i.imgur.com/0p0Y5Gv.png)
 
-Step 2: I created *blog\_comments table:* 
+Step 2: I created *blog_comments table:* 
+
 ![image](https://i.imgur.com/jTMmhEo.png)
 
 
 ## 5. Add Comments for management in Django Admin. 
 
 Step 1: In *admin.py* i added this line: 
+
 ![image](https://i.imgur.com/H2Vlsj7.png)
 
 **Result**:
@@ -71,14 +75,17 @@ Step 1: In *admin.py* i added this line:
 ## 6. Create an endpoint that creates a comment to a blog post (**input: blog_id, text**) 
 
 **Step 1: In** *views.py* i added this class: 
+
 ![image](https://i.imgur.com/3vkEBAa.png)
 
 
 Step 2: In *serializers.py* i added this class: 
+
 ![image](https://i.imgur.com/dfmJapL.png)
 
 
 Step 3: In *urls.py* i added this path:  
+
 ![image](https://i.imgur.com/jYaNMUT.png)
 
 
@@ -90,6 +97,7 @@ Step 3: In *urls.py* i added this path:
 ## 7. In endpoint **/blog/blog/{id}/** return the Blog post object and list of comments. 
 
 Step 1: In *views.py* i modified BlogItemView class in: 
+
 ![image](https://i.imgur.com/IEjeaH9.png)
 
 **Result**:
