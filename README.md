@@ -19,7 +19,7 @@ Step 2: I added this field into database table.
 
 ## 2. Open in Django Admin (access /admin website section) and add in Blog list the real blog name and status (enabled/disabled): 
 
-Step 1: I used:  python manage.py createsuperuser  with `username`: Cadi` and `password: 1234`
+Step 1: I used:  python manage.py createsuperuser  with `username`: Cadi and `password: 1234`
 
 Step 2: I created one blog.
 ![image](https://i.imgur.com/Y1aDf6F.png)
