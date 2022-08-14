@@ -33,6 +33,7 @@ Step 2: I created one blog.
 ## 3. Make an endpoint for create a blog post (similar as register endpoint) that will add a new record in blog table. 
 
 Step 1: In *views.py* i added this class: 
+
 ![image](https://i.imgur.com/S5900xr.png)
 
 Step 2: In *urls.py* i added this path: 
