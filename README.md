@@ -12,7 +12,8 @@ Step 1: I added field `enabled` in Blog Model.
 Step 2: I added this field into database table.
 ![image](https://i.imgur.com/pPfzanN.png)
 
-Result:  
+**Result**:  
+
 ![image](https://i.imgur.com/EjP13LA.png)
 
 
@@ -23,7 +24,8 @@ Step 1: I used:  python manage.py createsuperuser  with `username`: Cadi` and `p
 Step 2: I created one blog.
 ![image](https://i.imgur.com/Y1aDf6F.png)
 
-Result: 
+**Result**: 
+
 ![image](https://i.imgur.com/okx9Zw1.png)
 ![image](https://i.imgur.com/WrqvPBO.png)
 
@@ -39,7 +41,7 @@ Step 2: In *urls.py* i added this path:
 Step 3: In *serializers.py* i modified this class: 
 ![image](https://i.imgur.com/vvFAc3t.png)
 
-Result:  
+**Result**:
 ![image](https://i.imgur.com/yvE9QBX.png)
 
 
@@ -57,7 +59,8 @@ Step 2: I created *blog\_comments table:*
 Step 1: In *admin.py* i added this line: 
 ![image](https://i.imgur.com/H2Vlsj7.png)
 
-Results:  
+**Result**:
+
 ![image](https://i.imgur.com/XdQCwmr.png)
 
 
@@ -75,7 +78,8 @@ Step 3: In *urls.py* i added this path:
 ![image](https://i.imgur.com/jYaNMUT.png)
 
 
-**Result:** 
+**Result**:
+
 ![image](https://i.imgur.com/N7jRvjB.png)
 
 
@@ -84,7 +88,8 @@ Step 3: In *urls.py* i added this path:
 Step 1: In *views.py* i modified BlogItemView class in: 
 ![image](https://i.imgur.com/IEjeaH9.png)
 
-Result: 
+**Result**:
+
 ![image](https://i.imgur.com/MpqfYtz.png)
 
 
