@@ -7,9 +7,11 @@
 ## 1. Add in Blog model a boolean field **enabled** to make some posts published or unpublished. 
 
 Step 1: I added field `enabled` in Blog Model.
+
 ![image](https://i.imgur.com/wsZTGN8.png)
 
 Step 2: I added this field into database table.
+
 ![image](https://i.imgur.com/pPfzanN.png)
 
 **Result**:  
