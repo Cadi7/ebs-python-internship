@@ -100,11 +100,11 @@ Step 3: In *urls.py* i added this path:
 
 Step 1: In *views.py* i modified BlogItemView class in: 
 
-![image](https://i.imgur.com/IEjeaH9.png)
+![image](https://i.imgur.com/tEosN7l.png)
 
 **Result**:
 
-![image](https://i.imgur.com/MpqfYtz.png)
+![image](https://i.imgur.com/sE8FU5F.png)
 
 
 ### Remarks
