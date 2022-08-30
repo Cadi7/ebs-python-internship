@@ -21,22 +21,22 @@ class CreateBlogView(GenericAPIView):
     permission_classes = (AllowAny,)
     authentication_classes = ()
 
-    @serialize_decorator(BlogSerializer)
-    def post(self, request):
-        validated_data = request.serializer.validated_data
 
-        blog = Blog.objects.create(
-            id=validated_data['id'],
-            title=validated_data['title'],
-            slug=validated_data['slug'],
-            body=validated_data['body'],
-            posted=validated_data['posted'],
-            category=validated_data['category'],
-            Enabled=True
-        )
-        blog.save()
+class BlogItemView(GenericAPIView):
+    serializer_class = BlogSerializer, CommentSerializer
 
-        return Response(BlogSerializer(blog).data)
+    permission_classes = (AllowAny,)
+    authentication_classes = ()
+
+    @staticmethod
+    def get(request, pk):
+        blog = get_object_or_404(Blog.objects.filter(pk=pk))
+        comments = Comments.objects.all().filter(blog_id=pk)
+        context = {
+            'blog': BlogSerializer(blog).data,
+            'comments': CommentSerializer(comments, many=True).data
+        }
+        return Response(context)
 
 
 class BlogListView(GenericAPIView):
@@ -51,22 +51,20 @@ class BlogListView(GenericAPIView):
 
         return Response(BlogSerializer(blogs, many=True).data)
 
+    @serialize_decorator(BlogSerializer)
+    def post(self, request):
+        validated_data = request.serializer.validated_data
 
-class BlogItemView(GenericAPIView):
-    serializer_class = BlogSerializer, CommentSerializer
+        blog = Blog.objects.create(
+            title=validated_data['title'],
+            slug=validated_data['slug'],
+            body=validated_data['body'],
+            category=validated_data['category'],
+            enabled=True
+        )
+        blog.save()
 
-    permission_classes = (AllowAny,)
-    authentication_classes = ()
-
-    @staticmethod
-    def get(request, pk):
-        blog = get_object_or_404(Blog.objects.filter(pk=pk))
-        comments = Comments.objects.all().filter(blog_id=pk)
-        context = {
-            'blog': BlogSerializer(blog).data,
-            'comments': CommentSerializer(comments,  many=True).data
-        }
-        return Response(context)
+        return Response(BlogSerializer(blog).data)
 
 
 class PostCommentView(GenericAPIView):

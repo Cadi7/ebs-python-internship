@@ -10,8 +10,8 @@ router.register(r'categories', CategoryViewSet, basename='category')
 urlpatterns = router.urls
 
 urlpatterns += [
-    path('blog/', BlogListView.as_view(), name='blog_list'),
+    path('', BlogListView.as_view(), name='blog_list'),
     path('commments/', PostCommentView.as_view(), name='comments'),
-    path('blog/<int:pk>/', BlogItemView.as_view(), name='blog_item'),
-    path('create/', CreateBlogView.as_view(), name='blog')
+    path('<int:pk>/', BlogItemView.as_view(), name='blog_item'),
+    # path('create/', CreateBlogView.as_view(), name='blog')
 ]
